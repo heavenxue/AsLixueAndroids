@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="10dp"
+    tools:context=".samples.libSamples.bezier.MainActivity">
+
+    <com.aibei.lixue.lixuelib.view.PathBezier
+        android:id="@+id/path_bezier"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+    <!--<EditText-->
+        <!--android:layout_alignBottom="@id/path_bezier"-->
+        <!--android:layout_width="200dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:id="@+id/edit_query"-->
+        <!--android:imeOptions="flagNoExtractUi"-->
+        <!--android:layout_margin="0dp"-->
+        <!--android:background="@drawable/ipay_list_border"-->
+        <!--/>-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/path_bezier"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btn_plugin"
+        android:text="跳转"
+        android:textColor="#ffffff"
+        android:background="#ff2255"
+        />
+
+</RelativeLayout>

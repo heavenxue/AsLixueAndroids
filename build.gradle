@@ -1,0 +1,24 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+/**buildscript这里配置了驱动构建过程**/
+buildscript {
+    repositories {
+        jcenter()/**声明了jcenter库**/
+    }
+    dependencies {/**声明了jcenter文件的依赖路径，这个文件就是包含了2.0.0版本的adnroid gradle插件的库**/
+        classpath 'com.android.tools.build:gradle:2.0.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
