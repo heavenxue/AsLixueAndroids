@@ -38,8 +38,7 @@ public class HomeActivity extends AppCompatActivity {
         mNavigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
-                switch (menuItem.getItemId())
-                {
+                switch (menuItem.getItemId()) {
                     case R.id.item_one:
                         getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new FragmentOne()).commit();
                         mToolbar.setTitle("我的动态");

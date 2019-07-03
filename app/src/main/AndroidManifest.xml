@@ -2,18 +2,16 @@
 <manifest package="com.aibei.lixue.lixueandroids"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 <application
     android:allowBackup="true"
     android:label="@string/app_name"
     android:supportsRtl="true"
-    android:theme="@style/AppTheme"
->
+    android:theme="@style/AppTheme">
     <activity android:name=".samples.mertialDesign.drawerLayout.HomeActivity" android:label="@string/app_name">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN"/>
 
-            <category android:name="android.intent.category.LAUNCHER"/>
-        </intent-filter>
     </activity>
     <activity android:name=".samples.libSamples.bezier.MainActivity" android:windowSoftInputMode="adjustResize"
               android:label="@string/main_name"
@@ -21,6 +19,13 @@
         <meta-data
             android:name="android.support.PARENT_ACTIVITY"
             android:value=".samples.mertialDesign.drawerLayout.HomeActivity"/>
+    </activity>
+    <activity android:name=".samples.pictures.PhotoWallActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
     </activity>
 </application>
 </manifest>

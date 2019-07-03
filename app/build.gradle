@@ -2,14 +2,14 @@ apply plugin: 'com.android.application'
 
 /**这里配置了android构建过程需要的参数，这里也是android dsl的入口点**/
 android {
-    compileSdkVersion 23    /**目标编译sdk版本,相当于旧版本project.properties中的target属性一样，一个int一个string类型的值**/
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 26    /**目标编译sdk版本,相当于旧版本project.properties中的target属性一样，一个int一个string类型的值**/
+    buildToolsVersion "27.0.3"
 
     /**定义配置**/
     defaultConfig {
         applicationId "com.aibei.lixue.lixueandroids"/**有效的包名**/
-        minSdkVersion 11
-        targetSdkVersion 23
+        minSdkVersion 16
+        targetSdkVersion 26
         versionCode 1
         versionName '1.0.0'
     }
@@ -78,10 +78,11 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     provided 'junit:junit:4.12'
     //provided关键字，可以将你需要的库引入，但是并不会将其打包到aar里面
-    compile 'com.android.support:appcompat-v7:23.2.0'//依赖远程文件
-    compile 'com.android.support:design:23.2.0'
     compile project(':lixuelib')
     //依赖module
     //    compile files 'libs/a.jar'//依赖本地文件
+    implementation 'com.android.support:appcompat-v7:26.0.0-beta1'
+    implementation 'com.android.support:design:26.0.0-beta1'
+    implementation 'com.squareup.okhttp:okhttp:2.0.0'
 }
 

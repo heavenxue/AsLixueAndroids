@@ -29,15 +29,15 @@
                     <item
                         android:id="@+id/item2_one"
                         android:icon="@mipmap/icon"
-                        android:title="我的动态"></item>
+                        android:title="功能列表1"></item>
                     <item
                         android:id="@+id/item2_two"
                         android:icon="@mipmap/icon"
-                        android:title="我的留言"></item>
+                        android:title="功能列表2"></item>
                     <item
                         android:id="@+id/item2_three"
                         android:icon="@mipmap/icon"
-                        android:title="附近的人"></item>
+                        android:title="功能列表3"></item>
                 </group>
             </menu>
         </item>

@@ -4,9 +4,10 @@
 buildscript {
     repositories {
         jcenter()/**声明了jcenter库**/
+        google()
     }
     dependencies {/**声明了jcenter文件的依赖路径，这个文件就是包含了2.0.0版本的adnroid gradle插件的库**/
-        classpath 'com.android.tools.build:gradle:2.0.0'
+         classpath 'com.android.tools.build:gradle:3.1.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -16,6 +17,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        google()
     }
 }
 
