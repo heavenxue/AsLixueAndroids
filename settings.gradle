@@ -1,1 +1,1 @@
-include ':app', ':lixuelib'
+include ':app', ':lixuelib', ':annotationprocessor'

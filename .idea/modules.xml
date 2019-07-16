@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LixueAndroids.iml" filepath="$PROJECT_DIR$/LixueAndroids.iml" />
+      <module fileurl="file://$PROJECT_DIR$/annotationprocessor/annotationprocessor.iml" filepath="$PROJECT_DIR$/annotationprocessor/annotationprocessor.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lixuelib/lixuelib.iml" filepath="$PROJECT_DIR$/lixuelib/lixuelib.iml" />
     </modules>
