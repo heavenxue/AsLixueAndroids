@@ -2,4 +2,8 @@
 <resources>
     <color name="windowBackgroundColor">#333333</color>
     <color name="black_translucent">#80000000</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="wd_common">#ECEAEA</color>
 </resources>

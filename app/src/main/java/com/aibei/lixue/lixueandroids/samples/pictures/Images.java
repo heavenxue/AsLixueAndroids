@@ -44,4 +44,23 @@ public class Images {
             "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151300623&di=94233268e592a232d9461016155a493f&imgtype=0&src=http%3A%2F%2Fimage.xinmin.cn%2F2016%2F07%2F25%2Fthumb_940__1469414381330.jpg",
             "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151300623&di=41ee6b5dc55d9a6b3da9f069325baede&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180926%2F9b82a8600e8242b99c6243854db94d28.jpeg"
     };
+
+    public final static String[] imageJingdongUrls1 = new String[]{
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100891&di=6e6e558c3c7b24b84c82a078e3486324&imgtype=0&src=http%3A%2F%2Fphotocdn.sohu.com%2F20150722%2FImg417266885.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100891&di=ea338fe244c96cd0074bd754b109f075&imgtype=0&src=http%3A%2F%2Fi2.sinaimg.cn%2Flx%2Ffa%2Fp%2F2010%2F0122%2FU3072P8T1D963029F913DT20100121140354.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100891&di=0e058d8783d8a08cf18450ca65fcc2ab&imgtype=0&src=http%3A%2F%2Fp8.qhimg.com%2Ft019f7a479e9f2732cd.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100890&di=766c365b33770a66a86efb9a9fe8c0ca&imgtype=0&src=http%3A%2F%2Fn.sinaimg.cn%2Ffashion%2Ftransform%2F20170711%2F9FjR-fyhwret1713044.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100890&di=a0e49152f6c04d05de02685721b84763&imgtype=0&src=http%3A%2F%2Fphotocdn.sohu.com%2F20130806%2FImg383527276.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100890&di=e92db88c412429a0e41f6e726bcf1e00&imgtype=0&src=http%3A%2F%2Fimg2015.zdface.com%2F20180311%2Fa63371797452295b3aaaff4a0eee4f67.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100890&di=22941844ef2ad8d3b81925588dc1aef8&imgtype=0&src=http%3A%2F%2Fphotocdn.sohu.com%2F20080306%2FImg255556928.jpg",
+    };
+
+    public final static String[] imageJingdongUrls2 = new String[]{
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100890&di=e92db88c412429a0e41f6e726bcf1e00&imgtype=0&src=http%3A%2F%2Fimg2015.zdface.com%2F20180311%2Fa63371797452295b3aaaff4a0eee4f67.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100890&di=22941844ef2ad8d3b81925588dc1aef8&imgtype=0&src=http%3A%2F%2Fphotocdn.sohu.com%2F20080306%2FImg255556928.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100890&di=de7c483bed81fd1e3dc27bf472739b6a&imgtype=0&src=http%3A%2F%2Fs9.rr.itc.cn%2Fr%2FwapChange%2F201311_6_15%2Fa02q5u3525301521340.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100890&di=614d55e428d3ce800a5e0ac22863afb8&imgtype=0&src=http%3A%2F%2Fg1.hexunimg.cn%2F2014-03-10%2F162871080.jpg",
+            "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=266017921,1064790838&fm=26&gp=0.jpg",
+            "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1562151100885&di=48fe80508bec68da543191d83f50d2b6&imgtype=0&src=http%3A%2F%2Fs7.rr.itc.cn%2Fg%2F2%2FjR%2FFNj2m2e.jpg",
+    };
 }

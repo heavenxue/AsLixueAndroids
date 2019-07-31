@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.aibei.lixue.lixueandroids.samples.jingdongHome.JingdongHomeActivity">
+    <LinearLayout
+        android:id="@+id/ll_dalei3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <com.aibei.lixue.lixueandroids.samples.jingdongHome.PagerIndicator
+            android:id="@+id/pagerIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:pi_slidingBlock="@drawable/login_nav_selection"
+            app:pi_allowWidthFull="true"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10dp"
+            android:background="#006655"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/text_slidingTabTitle"
+                    android:drawablePadding="5dp"
+                    android:text="@string/jingdong_tab1"
+                    />
+                <TextView
+                    style="@style/text_slidingTabTitle"
+                    android:drawablePadding="5dp"
+                    android:text="@string/jingdong_tab2" />
+
+                <TextView
+                    style="@style/text_slidingTabTitle"
+                    android:drawablePadding="5dp"
+                    android:text="@string/jingdong_tab3" />
+
+                <TextView
+                    style="@style/text_slidingTabTitle"
+                    android:drawablePadding="5dp"
+                    android:text="@string/jingdong_tab4" />
+
+                <TextView
+                    style="@style/text_slidingTabTitle"
+                    android:drawablePadding="5dp"
+                    android:text="@string/jingdong_tab5" />
+            </LinearLayout>
+
+        </com.aibei.lixue.lixueandroids.samples.jingdongHome.PagerIndicator>
+        <com.aibei.lixue.lixueandroids.samples.jingdongHome.MyScrollView
+            android:id="@+id/scrollview_jingdong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <LinearLayout
+                android:id="@+id/ll_rootview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <com.aibei.lixue.lixueandroids.samples.jingdongHome.CommonViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </LinearLayout>
+        </com.aibei.lixue.lixueandroids.samples.jingdongHome.MyScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

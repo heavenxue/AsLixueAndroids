@@ -1,4 +1,4 @@
-package com.aibei.lixue.lixueandroids.samples.pictures;
+package com.aibei.lixue.lixueandroids.samples.jingdongHome;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -19,6 +19,8 @@ import java.io.InputStream;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+import okhttp3.Call;
+import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -27,7 +29,7 @@ import okhttp3.Response;
  * 作者：lixue on 2019/7/3 16:46
  */
 
-public class PhotoWallAdapter extends ArrayAdapter<String> implements AbsListView.OnScrollListener {
+public class GridviewAdapter extends ArrayAdapter<String> implements AbsListView.OnScrollListener {
 
     private GridView mGridView;
     private String[] imageUrls;
@@ -39,7 +41,7 @@ public class PhotoWallAdapter extends ArrayAdapter<String> implements AbsListVie
     private ExecutorService executorService;
 
 
-    public PhotoWallAdapter(Context context, int textViewResouceId,String[] imageUrls,GridView photowall) {
+    public GridviewAdapter(Context context, int textViewResouceId, String[] imageUrls, GridView photowall) {
         super(context,textViewResouceId,imageUrls);
         this.imageUrls = imageUrls;
         mGridView = photowall;
@@ -97,7 +99,7 @@ public class PhotoWallAdapter extends ArrayAdapter<String> implements AbsListVie
         if (bitmap != null) {
             imageView.setImageBitmap(bitmap);
         } else {
-            imageView.setImageResource(R.mipmap.empty_photo);
+            imageView.setImageResource(R.mipmap.image_default);
         }
     }
 
@@ -114,21 +116,26 @@ public class PhotoWallAdapter extends ArrayAdapter<String> implements AbsListVie
 //                       new Thread(new Runnable() {
 //                           @Override
 //                           public void run() {
-                               try {
-                                   Request request = new Request.Builder()
-                                           .url(imageUrl)
-                                           .build();
-                                   Response response = null;
-                                   response = okHttpClient.newCall(request).execute();
-                                   InputStream inputStream = response.body().byteStream();
-                                   Bitmap theBitmap = BitmapFactory.decodeStream(inputStream);
-                                   if (theBitmap != null){
-                                       addBitmapToMemoryCache(imageUrl,theBitmap);
-                                   }
-                               } catch (IOException e) {
-                                   e.printStackTrace();
-                               }
-//                           }
+                        Request request = new Request.Builder()
+                                .url(imageUrl)
+                                .build();
+                        okHttpClient.newCall(request).enqueue(new Callback() {
+                            @Override
+                            public void onFailure(Call call, IOException e) {
+
+                            }
+
+                            @Override
+                            public void onResponse(Call call, Response response) throws IOException {
+                                InputStream inputStream = response.body().byteStream();
+                                Bitmap theBitmap = BitmapFactory.decodeStream(inputStream);
+                                if (theBitmap != null){
+                                    addBitmapToMemoryCache(imageUrl,theBitmap);
+                                }
+                            }
+                        });
+
+                        //                           }
 //                       }).start();
                     }
                 });

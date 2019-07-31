@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.aibei.lixue.lixueandroids.samples.jingdongHome.MyGridView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_viewpager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:stretchMode="columnWidth"
+    android:numColumns="2"
+    android:verticalSpacing="10dp"
+    android:layout_centerHorizontal="true"
+    android:gravity="center"
+    ></com.aibei.lixue.lixueandroids.samples.jingdongHome.MyGridView>

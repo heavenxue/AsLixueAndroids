@@ -11,8 +11,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class SportsModelImpl implements SportsModel {
+
     @Override
-    public void getSportsInfo(String cityNumber, OnSportsListener listener) {
+    public void loadSportsNews(String cityNumber, OnSportsListener listener) {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("http://www.resss.cn")
                 .addConverterFactory(GsonConverterFactory.create())

@@ -26,13 +26,24 @@
         <activity android:name=".samples.pictures.PhotoWallActivity">
         </activity>
         <activity android:name=".thirdframes.rxjavaDemo.RxjavaDemoActivity">
+        </activity>
+        <activity android:name=".MVC.MVCActivity">
+        </activity>
+        <activity android:name=".MVP.MvpActivity">
+        </activity>
+        <activity android:name=".thirdframes.glideDemo.GlideDemoActivity">
+        </activity>
+        <activity android:name=".thirdframes.butterknifeDemo.ButterknifeDemoActivity">
+        </activity>
+        <activity android:name=".thirdframes.eventbusDemo.EventbusDemoActivity">
+        </activity>
+        <activity android:name=".samples.jingdongHome.JingdongHomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MVC.MVCActivity">
+        <activity android:name=".samples.jingdongHome.JingdongHome2Activity">
         </activity>
     </application>
 

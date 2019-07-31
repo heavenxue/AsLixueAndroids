@@ -5,5 +5,5 @@ package com.aibei.lixue.lixueandroids.MVC;
  */
 
 public interface SportsModel {
-    void getSportsInfo(String cityNumber,OnSportsListener listener);
+    void loadSportsNews(String cityNumber,OnSportsListener listener);
 }

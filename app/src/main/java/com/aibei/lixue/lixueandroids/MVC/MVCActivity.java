@@ -31,7 +31,7 @@ public class MVCActivity extends AppCompatActivity implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btn_go:
-                sportsModel.getSportsInfo("SDKFJ", this);
+                sportsModel.loadSportsNews("SDKFJ", this);
                 break;
         }
     }

@@ -15,4 +15,29 @@
     <string name="action_example">Example action</string>
 
     <string name="action_settings">Settings</string>
+
+
+
+    <string name="jingdong_tab1">精选</string>
+    <string name="jingdong_tab2">超市</string>
+    <string name="jingdong_tab3">生活</string>
+    <string name="jingdong_tab4">时尚</string>
+    <string name="jingdong_tab5">电器</string>
+    <string name="jingdong_text1">京东超市</string>
+    <string name="jingdong_text2">数码电器</string>
+    <string name="jingdong_text3">京东服饰</string>
+    <string name="jingdong_text4">京东生鲜</string>
+    <string name="jingdong_text5">充值缴费</string>
+    <string name="jingdong_text6">领京豆</string>
+    <string name="jingdong_text7">领券</string>
+    <string name="jingdong_text8">借钱</string>
+    <string name="jingdong_text9">PLUS会员</string>
+    <string name="jingdong_text10">京东秒杀</string>
+    <string name="jingdong_text11">发现好货</string>
+    <string name="jingdong_text12">品牌闪购</string>
+    <string name="jingdong_text13">我的频道</string>
+    <string name="jingdong_text14">新品首发</string>
+
+
+
 </resources>

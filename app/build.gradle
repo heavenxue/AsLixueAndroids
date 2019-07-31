@@ -12,6 +12,12 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName '1.0.0'
+
+        javaCompileOptions{
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
     }
 
     /**构建项目结构（使用了旧项目结构中的main源码，并且将androidTest sourceSet组件重新映射到tests文件夹。）**/
@@ -89,14 +95,26 @@ dependencies {
     //    compile files 'libs/a.jar'//依赖本地文件
     implementation 'com.android.support:appcompat-v7:26.0.0-beta1'
     implementation 'com.android.support:design:26.0.0-beta1'
-    implementation 'com.squareup.okhttp:okhttp:2.0.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.9.0'
 
     implementation 'io.reactivex.rxjava2:rxjava:2.2.5'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
 
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.0.2'
     implementation 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
     implementation 'com.google.code.gson:gson:2.8.0'
+
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    implementation 'com.jakewharton:butterknife-compiler:8.5.1'
+
+
+    implementation 'com.github.markzhai:blockcanary-android:1.5.0'
+
+    implementation 'org.greenrobot:eventbus:3.0.0'
+
 }
 
