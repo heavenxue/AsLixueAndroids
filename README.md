@@ -5,4 +5,4 @@
 
  
 #### 仿京东首页UI效果图
-![jingdonghome.gif](https://github.com/heavenxue/AsLixueAndroids/tree/master/gif/jingdongHome.gif)
+![jingdonghome.gif](https://github.com/heavenxue/AsLixueAndroids/raw/master/gif/jingdongHome.gif)
