@@ -26,6 +26,10 @@
         <activity android:name=".samples.pictures.PhotoWallActivity">
         </activity>
         <activity android:name=".thirdframes.rxjavaDemo.RxjavaDemoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".MVC.MVCActivity">
         </activity>
@@ -38,10 +42,6 @@
         <activity android:name=".thirdframes.eventbusDemo.EventbusDemoActivity">
         </activity>
         <activity android:name=".samples.jingdongHome.JingdongHomeActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".samples.jingdongHome.JingdongHome2Activity">
         </activity>

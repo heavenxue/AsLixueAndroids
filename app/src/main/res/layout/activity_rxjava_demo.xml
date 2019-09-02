@@ -7,4 +7,17 @@
     android:layout_height="match_parent"
     tools:context="com.aibei.lixue.lixueandroids.thirdframes.rxjavaDemo.RxjavaDemoActivity">
 
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="sdjkfjdfk"
+        />
+
+    <Button
+        android:id="@+id/btn_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_show"
+        />
 </android.support.constraint.ConstraintLayout>

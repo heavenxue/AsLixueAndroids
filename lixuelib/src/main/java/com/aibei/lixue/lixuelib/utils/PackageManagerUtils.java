@@ -31,4 +31,15 @@ public class PackageManagerUtils {
         }
         return hasInstalled;
     }
+
+    public static String getApplicationNameByPackageName(Context context, String packageName) {
+        PackageManager pm = context.getPackageManager();
+        String Name;
+        try {
+            Name = pm.getApplicationLabel(pm.getApplicationInfo(packageName, PackageManager.GET_META_DATA)).toString();
+        } catch (PackageManager.NameNotFoundException e) {
+            Name = "";
+        }
+        return Name;
+    }
 }
