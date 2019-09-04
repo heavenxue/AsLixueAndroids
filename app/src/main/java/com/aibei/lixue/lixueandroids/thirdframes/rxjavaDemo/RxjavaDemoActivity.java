@@ -11,9 +11,16 @@ import com.aibei.lixue.lixueandroids.R;
 import com.aibei.lixue.lixuelib.utils.PackageManagerUtils;
 import com.jakewharton.rxbinding2.view.RxView;
 
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import io.reactivex.BackpressureStrategy;
+import io.reactivex.Flowable;
+import io.reactivex.FlowableEmitter;
+import io.reactivex.FlowableOnSubscribe;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -659,6 +666,11 @@ public class RxjavaDemoActivity extends AppCompatActivity {
                 });
     }
 
+    /**
+     * 实现功能防抖
+     * 表现：由于外部原因，多次触发了功能，导致出现冗余功能
+     * 解决方案原理：通过根据指定时间过滤事件的过滤操作符实现throtterFirst(在规定时间内只会响应第一次操作)，防止功能的抖动
+     */
     private void testFunctionPreventShake() {
         RxView.clicks(btn_test)
                 .throttleFirst(2, TimeUnit.SECONDS)  // 才发送 2s内第1次点击按钮的事件
@@ -688,9 +700,57 @@ public class RxjavaDemoActivity extends AppCompatActivity {
 
     /**
      *  背压策略：https://blog.csdn.net/carson_ho/article/details/79081407
+     *  出现发送 & 接收事件严重不匹配的问题
+     *  背压的作用域 = 异步订阅关系，即 被观察者 & 观察者处在不同线程中
+     *  具体表现：当缓存区大小存满（默认缓存区大小128）、被观察者仍然继续下发下一个事件
+     *  解决方案：手动创建Flowable,
+     *      BackpressureStrategy.ERROR:直接抛异常
+     *      BackpressureStrategy.MISSING：友好提示：缓存区满了
+     *      BackpressureStrategy.BUFFER：将缓存区设置成无限大，即被观察者可无限发送事件观察者，实际上是存在缓存区，注意内存情况，防止OOM
+     *      BackpressureStrategy.DROP:超过缓存区大小（128）的事件丢弃
+     *      BackpressureStrategy.LATEST：只保存最新（最后）事件，超过缓存区大小（128）的事件丢弃
      */
     private void beiya(){
+        // 步骤1：创建被观察者 =  Flowable
+        Flowable.create(new FlowableOnSubscribe<Integer>() {
+            @Override
+            public void subscribe(FlowableEmitter<Integer> emitter) throws Exception {
+                Log.d(TAG, "发送事件 1");
+                emitter.onNext(1);
+                Log.d(TAG, "发送事件 2");
+                emitter.onNext(2);
+                Log.d(TAG, "发送事件 3");
+                emitter.onNext(3);
+                Log.d(TAG, "发送完成");
+                emitter.onComplete();
+            }
+        }, BackpressureStrategy.ERROR).subscribeOn(Schedulers.io()) // 设置被观察者在io线程中进行
+                .observeOn(AndroidSchedulers.mainThread()) // 设置观察者在主线程中进行
+                .subscribe(new Subscriber<Integer>() {
+                    // 步骤2：创建观察者 =  Subscriber & 建立订阅关系
 
+                    @Override
+                    public void onSubscribe(Subscription s) {
+                        Log.d(TAG, "onSubscribe");
+                        s.request(3);
+                    }
+
+                    @Override
+                    public void onNext(Integer integer) {
+                        Log.d(TAG, "接收到了事件" + integer);
+                    }
+
+                    @Override
+                    public void onError(Throwable t) {
+                        Log.w(TAG, "onError: ", t);
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+
+                });
     }
 
 }
